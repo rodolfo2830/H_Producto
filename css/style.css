@@ -2,140 +2,204 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  text-decoration: none;
+}
+body {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  display: block;
+}
+.container {
+  min-height: 100dvh; /* Asegura que el contenedor ocupe al menos toda la altura de la ventana,
+  tambien a parte de dvh o lvh o svh*/
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Tres filas para el encabezado, contenido y pie de 
+  página el fr nos dice que todo lo que sobre se rellene en esl medio*/
 }
 header {
-  margin: auto;
-  width: 1100px;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #193865;
+  width: 100vw;
+  position: fixed;
+  z-index: 1000; /* Asegura que el header esté siempre encima de otros contenidos */
+  place-items: center; /* Alinea el contenido del header al centro */
+  margin: 0 px;
+  padding: 0 px;
 }
-
-.logo_wolf {
-  width: 80px;
-  height: 80px;
-  position: relative;
-  left: 20px;
-  float: left;
-}
-
-nav {
-  float: right;
-  position: relative;
-}
-
-.nav {
-  color: white;
-  padding: 20px;
+.header_desplegable {
+  margin: 0 px;
+  padding: 0 px;
+  background-color: #193865;
   display: flex;
 }
+.logo {
+  width: 60px;
+  height: auto;
+  /* No se necesita float aquí si se usa flexbox en el header */
+  padding: 0; /* Quita el padding del logo específicamente si el header ya lo tiene */
+}
+nav {
+  /* No se necesita float aquí si se usa flexbox en el header */
+  /* Permite que el nav crezca y tome el espacio disponible */
+  flex-grow: 1;
+  display: flex; /* Usa flexbox para el contenido del nav también */
+  justify-content: flex-end; /* Empuja los elementos del nav a la derecha */
+  align-items: center; /* Alinea verticalmente los elementos del nav */
+}
+.nav {
+  color: white;
+  padding: 0; /* Quita el padding del ul mismo, ya que los li lo tendrán */
+  display: flex; /* Hace que los elementos principales de la lista de navegación se muestren en una fila */
+  list-style: none; /* Elimina los puntos de la lista */
+  margin-right: 10px; /* Añade algo de espacio entre el nav y la búsqueda */
+}
 .nav li {
-  background-color: green;
-  padding: 10px 10px;
+  background-color: #0a192f;
+  padding: 9px 15px; /* Ajusta el padding para una mejor apariencia */
   text-decoration: none;
-  display: block;
+  display: block; /* Importante para el padding y el fondo */
   cursor: pointer;
   position: relative;
+  margin-left: 2px;
+  /* No se necesita float aquí si el padre es flex */
 }
-
-.nav li ul{
+.nav li a {
+  color: white; /* Asegura que el texto del enlace sea blanco */
+  display: block; /* Hace que todo el li sea clickeable a través del ancla */
+}
+.nav li ul {
   display: none;
   position: absolute;
-  min-width: 100px;
+  min-width: 150px; /* Dale un poco más de ancho a los elementos del submenú */
   top: 100%;
   left: 0;
+  background-color: #0a192f; /* Asegura que el submenú tenga un fondo */
+  z-index: 1000; /* Asegura que el submenú aparezca encima de otro contenido */
+  list-style: none; /* Elimina los puntos de la lista del submenú */
 }
-
-.nav li:hover { /*cuando el cursor pasa por encima*/
+.nav li ul li {
+  padding: 8px 15px; /* Ajusta el padding para los elementos del submenú */
+  white-space: nowrap; /* Evita que los elementos se envuelvan */
+}
+.nav li:hover {
   background-color: #434343;
 }
-.nav > li {
-  float: left;
-}
-.nav li:hover> ul{
+/* No se necesita .nav > li { float: left; } si se usa flexbox en .nav */
+.nav li:hover > ul {
   display: block;
 }
+/* Estilo para el input de búsqueda y su etiqueta */
+.search {
+  width: 200px;
+  padding: 10px;
+  padding-right: 35px;
+  border-radius: 99em 0 0 99em; /* Un border-radius más simple para el input */
+  border: 2px solid #ccc; /* Añade un borde sutil */
+  margin: 0; /* Elimina los márgenes existentes del input */
+  outline: none;
+}
+/* Opcional: estilo para el botón de búsqueda si añades uno */
+button {
+  background-color: crimson;
+  color: white;
+  border: none;
+  margin: auto;
+  border-radius: 0 99em 99em 0; /* Coincide con la esquina redondeada del input en un lado */
+  padding: 6px 15px; /* Ajusta el padding para una mejor apariencia */
+  position: absolute;
+  cursor: pointer;
+  margin-left: -1px; /* Superpone ligeramente el borde con el input para una apariencia limpia */
+}
+button:hover {
+  background-color: #ff6347; /* Cambia el color al pasar el mouse */
+}
+.fa-brands fa-searchengin {
+  font-size: 1em;
+}
 
-
+/**/
 /*aca estara la parte de articulos*/
+
+main {
+  align-items: center;
+  max-width: 1300px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  position: relative;
+}
 .photo_completa {
-  width: 100vw;
-  height: 60vh;
-  clear: both; /* Limpia los floats anteriores */
+  width: 100vw; /* Asegura que la imagen ocupe al menos toda la anchura de la ventana */
+  height: auto;
+  display: block;
+  overflow: hidden; /* Para evitar que el contenido se desborde */
 }
-
-.section_1 {
-  padding: 16px;
-  overflow: hidden; /* Contiene los elementos flotantes */
+section {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
 }
-
-.section_1 > div {
-  margin-bottom: 40px; /* Espacio entre secciones */
-  overflow: hidden; /* Contiene los floats dentro de cada div */
-}
-
-.blog_foto {
-  max-width: 360px;
-  margin-left: 30px;
-  float: left;
-}
-
-.monitoreo_foto {
-  max-width: 500px;
-  margin-right: 30px; /* Cambiado para dar espacio al artículo */
-  float: right; /* Cambiado a right para mejor distribución */
-}
-
-.mision_foto {
-  float: left;
-  max-width: 400px;
-  margin-left: 30px;
-}
-
 article {
-  background-color: #8ccdeb;
-  border: 2px solid #e0e0e0;
-  border-radius: 10px; /* Cambiado de 10% a 10px */
-  padding: 30px;
-  margin: 20px;
-  max-width: 600px; /* Reducido para mejor fit */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  overflow: hidden; /* Para contener el contenido */
+  max-width: 700px; /* Ancho máximo del artículo */
+  display: flex; /* Usa flexbox para alinear el contenido del artículo */
+  position: left;
+  align-items: center;
+  overflow: hidden;
+  margin: 20px auto; /* Añade margen para separar los artículos */
 }
-
-.article_1 {
-  float: right;
-  margin-right: 30px;
-}
-
-/* El segundo artículo va a la izquierda */
-.section_1 > div:nth-child(2) article {
-  float: left;
-  margin-left: 30px;
-}
-
-h2 {
-  background-color: #8ccdeb;
-  margin-bottom: 15px;
-}
-
-p {
+.content_1,
+.content_2,
+.content_3 {
   background-color: #8ccdeb;
   line-height: 1.6;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px; /* Cambiado de 10% a 10px */
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: justify;
+  place-items: center; /* Alinea el contenido al centro */
+  max-width: 600px; /* Ancho máximo del div */
 }
-
-/* Responsive para pantallas pequeñas */
-@media (max-width: 768px) {
-  .blog_foto,
-  .monitoreo_foto,
-  .mision_foto,
-  article {
-    float: none;
-    max-width: 100%;
-    margin: 20px auto;
-    display: block;
-  }
-
-  .section_2 > div {
-    text-align: center;
-  }
+p {
+  background-color: #8ccdeb;
+}
+.blog_foto {
+  max-width: 400px;
+}
+.monitoreo_foto {
+  max-width: 400px;
+}
+.mision_foto {
+  max-width: 400px;
+}
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.final {
+  display: block;
+  background-color: #003366;
+  max-width: 1300px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  place-items: center;
+  align-items: center;
+  color: white !important;
+  font-size: 20px;
+  margin: 0;
+}
+figure .logo_footer {
+  width: 100px;
+  height: autopx;
+  padding: 0;
+  margin-left: 10px;
+}
+hr {
+  border: 1px solid;
+  width: 500px;
+  margin-top: 10px; /* Centra el hr y añade margen */
+  margin-bottom: 10px;
+}
+address a {
+  color: white;
+}
+address {
+  font-size: 15px;
 }
