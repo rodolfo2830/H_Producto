@@ -15,12 +15,12 @@ body {
   min-height: 100dvh; /* Asegura que el contenedor ocupe al menos toda la altura de la ventana,
   tambien a parte de dvh o lvh o svh*/
   display: grid;
-  grid-template-rows: auto 1fr auto; /* Tres filas para el encabezado, contenido y pie de 
+  grid-template-rows: 1fr auto; /* Tres filas para el encabezado, contenido y pie de 
   página el fr nos dice que todo lo que sobre se rellene en esl medio*/
 }
 header {
   background-color: #193865;
-  width: 100vw;
+  width: 100%;
   position: fixed;
   z-index: 1000; /* Asegura que el header esté siempre encima de otros contenidos */
   place-items: center; /* Alinea el contenido del header al centro */
@@ -120,70 +120,77 @@ button:hover {
 
 /**/
 /*aca estara la parte de articulos*/
-
+/*aca esta la pagina home.html */
 main {
   align-items: center;
-  max-width: 1300px;
+  width: 100%;
   font-family: Georgia, "Times New Roman", Times, serif;
   position: relative;
+  margin-top: 30px; /* Asegura que el contenido principal no se superponga al header */
 }
 .photo_completa {
   width: 100vw; /* Asegura que la imagen ocupe al menos toda la anchura de la ventana */
   height: auto;
   display: block;
   overflow: hidden; /* Para evitar que el contenido se desborde */
+  max-height: 500px;
 }
 section {
   font-family: Georgia, "Times New Roman", Times, serif;
   display: flex;
 }
-article {
-  max-width: 700px; /* Ancho máximo del artículo */
-  display: flex; /* Usa flexbox para alinear el contenido del artículo */
-  position: left;
-  align-items: center;
+
+/*aca esta la pagina nosotros.html */
+article { /* Ancho máximo del artículo */
+  display: block; /* Usa flexbox para alinear el contenido del artículo */
   overflow: hidden;
   margin: 20px auto; /* Añade margen para separar los artículos */
+  place-items: center; /* Alinea el contenido al centro */
+  text-align: justify;
+}
+article .article_1{
+  display: block;
 }
 .content_1,
 .content_2,
 .content_3 {
-  background-color: #8ccdeb;
-  line-height: 1.6;
-  border: 2px solid #e0e0e0;
   border-radius: 10px; /* Cambiado de 10% a 10px */
   display: block;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: justify;
   place-items: center; /* Alinea el contenido al centro */
-  max-width: 600px; /* Ancho máximo del div */
+  max-width: 400px; /* Ancho máximo del div */
+  padding: 20px 0px 20px 0px;
 }
-p {
-  background-color: #8ccdeb;
+p{
+  padding: 10px 0px 10px 0px;
 }
-.blog_foto {
-  max-width: 400px;
-}
-.monitoreo_foto {
-  max-width: 400px;
-}
-.mision_foto {
-  max-width: 400px;
+.monitoreo_foto, .mision_foto {
+  width: 350px;
+  height: 150px;
 }
 h2 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+/*aca empieza el footer */
+footer {
+  width: 100%;
+}
 .final {
   display: block;
   background-color: #003366;
-  max-width: 1300px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   place-items: center;
-  align-items: center;
   color: white !important;
   font-size: 20px;
   margin: 0;
+  padding: 10px;
+}
+.final .name{
+  font-weight: bold;
+  color: hsl(200, 19%, 90%);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;;
 }
 figure .logo_footer {
   width: 100px;
