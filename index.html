@@ -28,24 +28,25 @@
               <li><a href="index.html">HOME</a></li>
               <li><a href="nosotros.html">Nosotros</a></li>
               <li>
-                Servicios
+                <a href="servicio.html">Servicios</a>
                 <ul>
-                  <li><a href=""></a>Mantenimiento</li>
-                  <li>Instalación</li>
-                  <li>Integración de Sistemas</li>
+                  <li><a href="smantenimiento.html">Mantenimiento</a></li>
+                  <li><a href="sinstalacion.html">Instalación</a></li>
+                  <li>
+                    <a href="sintegracion.html">Integración de Sistemas</a>
+                  </li>
                 </ul>
               </li>
               <!---->
               <li>
-                <a href="nosotros.html" class="producto">Productos</a>
+                <a href="producto.html" class="producto">Productos</a>
                 <ul>
-                  <li>Hogar</li>
-                  <li>MYPE</li>
+                  <li><a href="phcamera.html">Hogar camera</a></li>
+                  <li><a href="pmcamera.html">MYPE camera</a></li>
                 </ul>
               </li>
-              <li>Contáctanos</li>
-              <li>Testimonios</li>
-              <li>Trabajemos</li>
+              <li><a href="contactanos.html">Contáctanos</a></li>
+              <li><a href="testimonio.html">Testimonios</a></li>
             </ul>
             <label for="search" class="search-container">
               <input
@@ -63,32 +64,48 @@
       <div class="empty"></div>
 
       <!--parte principal del body-->
-      <main class="home">
+      <main>
         <!--solo cambiar esto-->
-        <div class="wrap">
-          <h1>La seguridad de tu hogar es nuestra prioridad.</h1>
-          <hr />
-        </div>
+        <section class="home">
+          <div class="wrap">
+            <h1>La seguridad de tu hogar es nuestra prioridad.</h1>
+            <hr />
+            <button>ADQUIERELO YA!</button>
+          </div>
+        </section>
+        <aside>
+          <article>
+            <h3>Promociones</h3>
+            <p>Obtén hasta el 15% de descuento</p>
+          </article>
+          <figure>
+            <img src="images/oferta.png" alt="oferta" class="oferta"/>
+          </figure>
+        </aside>
       </main>
       <!--pie de pagina-->
       <footer class="main-footer">
-        <div class="foot">
-          <address>follow us:</address>
+        <section class="foot">
+          <address><strong>follow us:</strong></address>
           <div class="redes">
-            <button>f</button>
-            <button>In</button>
-            <button>Ig</button>
+            <button class="facebook"></button>
+            <button class="instagram"></button>
+            <button class="twitter"></button>
+            <button class="wsp"></button>
           </div>
-        </div>
-        <div class="foot">
+        </section>
+        <section class="foot">
           <figure>
             <img src="images/Logo.png" alt="WOLF" class="logo-footer" />
           </figure>
-        </div>
-        <div class="foot">
-          <address>contactanos</address>
-          <address>acerca de nosotros</address>
-        </div>
+        </section>
+        <section class="foot_2">
+          <address><a href="contactanos.html">Contáctanos a nuestros números</a></address>
+          <address><a href="producto.html">Productos de alta calidad</a></address>
+          <address><a href="servicio.html">Servicios y más</a></address>
+          <address><a href="nosotros.html">Acerca de nosotros</a></address>
+          <address><a href="testimonio.html">Testimonios</a></address>
+        </section>
       </footer>
     </div>
   </body>

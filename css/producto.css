@@ -122,93 +122,65 @@ button:hover {
 /**/
 /*aca estara la parte de articulos*/
 /*aca esta la pagina home.html */
+main {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  justify-content: space-around;
+}
 .empty {
   padding: 40px;
   position: relative;
 }
-main {
-  display: flex;
-  flex-direction: column;
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-}
-main .home {
-  height: 100%;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  display: flex;
-  justify-items: end;
-  justify-content: flex-end;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url(/images/fondo.jpeg); /* Asegura que la imagen de fondo se centre y no se repita */
-  background-size: 100% 100%;
-  background-position: center;
-}
-main .home .wrap {
-  display: block;
-  align-content: center;
-  text-align: center;
-  width: 50%;
-  height: 400px;
-  font-size: 20px;
-  padding: 0px;
-}
-.home .wrap h1 {
-  padding: 40px 0px 0px 0px;
-  color: rgb(3, 3, 3);
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade un poco de sombra al texto */
-}
-hr {
-  border: 1px solid rgb(148, 35, 35);
-  width: 95%;
-  margin-top: 10px; /* Centra el hr y añade margen */
-  margin-bottom: 10px;
-}
-.home .wrap button {
-  padding: 10px;
-  margin: 10px;
-  background-color: #800020;
-  color: white;
-  border: none;
+main .home-camera,
+.mype-camera {
+  width: 48%;
+  height: auto;
+  margin: 15px 15px 15px 15px;
   border-radius: 10px;
-  font-size: 1.5rem;
-  font-family: "WDXL Lubrifont TC", sans-serif;
-  cursor: pointer;
+  display: block;
+  place-items: center;
 }
-.home .wrap button:hover {
+main .home-camera {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(173, 212, 228, 0.6)
+  );
+}
+main .mype-camera {
+  background: linear-gradient(
+    rgba(234, 230, 210, 0.6),
+    rgba(255, 254, 254, 0.5)
+  );
+}
+main article{
+    width: 300px;
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+}
+figure .camera{
+    width: auto;
+    height: 400px;
+    padding: 10px;
+}
+main .info{
+    padding: 10px;
+    margin: 10px;
+    background-color: #800020;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: "WDXL Lubrifont TC", sans-serif;
+}
+main .info:hover{
   opacity: 0.8;
   transform: scale(1.1); /* Hace que la imagen crezca un poco */
   transition: transform 0.2s ease-in-out;
 }
-main aside{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  background-color: white;
-  padding: 1rem;
-  border-left: 5px solid #0a3d62;
-  margin-bottom: 2rem;
-  border-radius: 5px;
-  margin: 0px;
-  justify-content: center;
-  gap: 9rem;
+a{
+  color: white;
 }
-aside figure{
-  display: flex;
-  align-items: center;
-  align-content: center;
-}
-aside .oferta{
-  width: 40%;
-}
-
-
 /**/
 /* Estilos para el pie de página */
 footer {
@@ -288,41 +260,52 @@ footer .foot_2 a{
   color: black;
 }
 
+
 /**/
-/**/
-/*NOSOTROS PAGE*/
-.container .nosotros {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url(/images/familia.jpeg);
-  place-items: center;
-  background-size: 100% 100%;
+/*Productos home*/
+.devices{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(223, 217, 217);
+}
+.devices section{
+  display: flex;
+  flex-direction: row;
+}
+section .products{
   position: relative;
+  width: 300px;
+  background-color: white;
+  margin: 50px auto;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px #758694;
+  overflow: hidden;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
 }
-.nosotros .wrap-nosotros {
-  position: left;
-  width: 50%;
-  height: 500px;
-  font-size: 20px;
-  text-align: justify;
-  font-weight: 600;
-  padding: 250px 0px 30px 30px;
-  margin-left: 550px;
-  color: rgb(211, 186, 186);
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+section .products:hover{
+  transform: translateY(-5px);
 }
-.nosotros .wrap-nosotros span {
-  color: yellow;
+.products img{
+  width: 100%;
+  height: 350px;
+  display: block;
+  object-fit: 100% 100%;
 }
-.nosotros .wrap-nosotros h2 {
-  color: rgba(255, 255, 255, 2);
-  font-size: 30px;
-  font-weight: 700;
-  text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5); /* Añade un poco de sombra al texto */
-  text-align: justify;
-  padding: 10px 5px;
+.insignia{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #800020;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-weight: bold;
+  z-index: 10;
+}
+h2{
+   font-family: "Quicksand", sans-serif;
 }
