@@ -1,0 +1,328 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  min-height: 100dvh; /* Asegura que el contenedor ocupe al menos toda la altura de la ventana,
+  tambien a parte de dvh o lvh o svh*/
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /* Tres filas para el encabezado, contenido y pie de 
+  página el fr nos dice que todo lo que sobre se rellene en esl medio*/
+}
+.container header {
+  background-color: white;
+  width: 100%;
+  position: fixed; /* el header esté siempre encima de otros contenidos */
+  height: 80px;
+  z-index: 1000;
+  display: grid; /* Cambia a grid para un mejor control del layout */
+  grid-template-columns: auto 1fr auto; /* Tres columnas: logo, nav y búsqueda */
+  align-items: center; /* Alinea verticalmente los elementos al centro */
+  padding: 0 40px;
+}
+header .header_desplegable {
+  width: 100%;
+  display: flex;
+  color: black;
+  font-weight: 700;
+}
+.logo {
+  width: 60px;
+  height: auto;
+  /* No se necesita float aquí si se usa flexbox en el header */
+  padding: 0;
+}
+nav {
+  flex-grow: 1;
+  display: flex; /* Usa flexbox para el contenido del nav también */
+  justify-content: flex-end; /* Empuja los elementos del nav a la derecha */
+  align-items: center; /* Alinea verticalmente los elementos del nav */
+}
+.nav {
+  padding: 0; /* Quita el padding del ul mismo, ya que los li lo tendrán */
+  display: flex; /* Hace que los elementos principales de la lista de navegación se muestren en una fila */
+  list-style: none; /* Elimina los puntos de la lista */
+  margin-right: 10px; /* Añade algo de espacio entre el nav y la búsqueda */
+}
+.nav li {
+  background-color: none;
+  padding: 9px 15px; /* Ajusta el padding para una mejor apariencia */
+  text-decoration: none;
+  display: block; /* Importante para el padding y el fondo */
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.5s ease; /* Añade una transición suave al cambiar el color de fondo */
+}
+.nav li a {
+  color: black; /* Asegura que el texto del enlace sea blanco */
+  display: block; /* Hace que todo el li sea clickeable a través del ancla */
+  text-decoration: none;
+}
+.nav li ul {
+  display: none;
+  position: absolute;
+  min-width: 180px; /* Dale un poco más de ancho a los elementos del submenú */
+  top: 100%;
+  left: 0;
+  background-color: white; /* Asegura que el submenú tenga un fondo */
+  z-index: 1000; /* Asegura que el submenú aparezca encima de otro contenido */
+  list-style: none; /* Elimina los puntos de la lista del submenú */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.nav li ul li {
+  padding: 8px 15px; /* Ajusta el padding para los elementos del submenú */
+  white-space: nowrap; /* Evita que los elementos se envuelvan */
+}
+.nav li:hover {
+  background-color: hsl(180, 10%, 61%);
+}
+.nav li:hover > ul {
+  display: block; /* Muestra el submenú al pasar el mouse */
+}
+ul li .producto {
+  color: red;
+}
+/* Estilo para el input de búsqueda y su etiqueta */
+.search {
+  width: 200px;
+  padding: 10px;
+  padding-right: 35px;
+  border-radius: 99em 0 0 99em; /* Un border-radius más simple para el input */
+  border: 2px solid #ccc; /* Añade un borde sutil */
+  margin: 0; /* Elimina los márgenes existentes del input */
+  outline: none;
+}
+/* Opcional: estilo para el botón de búsqueda si añades uno */
+label button {
+  background-color: crimson;
+  color: white;
+  border: none;
+  margin: auto;
+  border-radius: 0 99em 99em 0; /* Coincide con la esquina redondeada del input en un lado */
+  padding: 6px 15px; /* Ajusta el padding para una mejor apariencia */
+  position: absolute;
+  cursor: pointer;
+  margin-left: -1px; /* Superpone ligeramente el borde con el input para una apariencia limpia */
+}
+button:hover {
+  background-color: #ff6347; /* Cambia el color al pasar el mouse */
+}
+.fa-brands fa-searchengin {
+  font-size: 1em;
+}
+
+/**/
+/*aca estara la parte de articulos*/
+/*aca esta la pagina home.html */
+.empty {
+  padding: 40px;
+  position: relative;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+main .home {
+  height: 100%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+  justify-items: end;
+  justify-content: flex-end;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(/images/fondo.jpeg); /* Asegura que la imagen de fondo se centre y no se repita */
+  background-size: 100% 100%;
+  background-position: center;
+}
+main .home .wrap {
+  display: block;
+  align-content: center;
+  text-align: center;
+  width: 50%;
+  height: 400px;
+  font-size: 20px;
+  padding: 0px;
+}
+.home .wrap h1 {
+  padding: 40px 0px 0px 0px;
+  color: rgb(3, 3, 3);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade un poco de sombra al texto */
+}
+hr {
+  border: 1px solid rgb(148, 35, 35);
+  width: 95%;
+  margin-top: 10px; /* Centra el hr y añade margen */
+  margin-bottom: 10px;
+}
+.home .wrap button {
+  padding: 10px;
+  margin: 10px;
+  background-color: #800020;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-family: "WDXL Lubrifont TC", sans-serif;
+  cursor: pointer;
+}
+.home .wrap button:hover {
+  opacity: 0.8;
+  transform: scale(1.1); /* Hace que la imagen crezca un poco */
+  transition: transform 0.2s ease-in-out;
+}
+main aside{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  background-color: white;
+  padding: 1rem;
+  border-left: 5px solid #0a3d62;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  margin: 0px;
+  justify-content: center;
+  gap: 9rem;
+}
+aside figure{
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+aside .oferta{
+  width: 40%;
+}
+
+
+/**/
+/* Estilos para el pie de página */
+footer {
+  width: 100%;
+  height: auto;
+}
+.main-footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: hsl(19, 35%, 89%);
+  padding: 10px 0px;
+}
+footer .foot {
+  width: 30%;
+  display: block;
+  place-content: center;
+  place-items: center;
+}
+footer .foot_2 {
+  width: 30%;
+  display: block;
+}
+.main-footer .logo-footer {
+  width: 60px;
+  height: auto;
+}
+.redes {
+  display: flex;
+  gap: 20px; /* Espacio entre los iconos de redes sociales */
+  padding: 10px; /* Espacio alrededor de los iconos */
+}
+.redes button {
+  background: none;
+  border: none;
+  border-radius: 5px;
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #666464;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.redes button:hover {
+  opacity: 0.8;
+  transform: scale(1.1); /* Hace que la imagen crezca un poco */
+  transition: transform 0.2s ease-in-out; /* hace que sea mas lento*/
+}
+.redes .facebook {
+  background: url(/images/r_face.png);
+  background-size: 90% 90%; /* Cubre todo el botón */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.redes .wsp {
+  background: url(/images/r_wsp.png);
+  background-size: 90% 90%; /* Cubre todo el botón */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.redes .instagram {
+  background: url(/images/r_inst.png);
+  background-size: 90% 90%; /* Cubre todo el botón */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.redes .twitter {
+  background: url(/images/r_twit.png);
+  background-size: 90% 90%; /* Cubre todo el botón */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+footer .foot_2 a{
+  color: black;
+}
+
+/**/
+/**/
+/*NOSOTROS PAGE*/
+.container .nosotros {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(/images/familia.jpeg);
+  place-items: center;
+  background-size: 100% 100%;
+  position: relative;
+}
+.nosotros .wrap-nosotros {
+  position: left;
+  width: 50%;
+  height: 500px;
+  font-size: 20px;
+  text-align: justify;
+  font-weight: 600;
+  padding: 250px 0px 30px 30px;
+  margin-left: 550px;
+  color: rgb(211, 186, 186);
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+}
+.nosotros .wrap-nosotros span {
+  color: yellow;
+}
+.nosotros .wrap-nosotros h2 {
+  color: rgba(255, 255, 255, 2);
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5); /* Añade un poco de sombra al texto */
+  text-align: justify;
+  padding: 10px 5px;
+}

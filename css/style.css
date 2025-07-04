@@ -4,8 +4,13 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  display: block;
 }
 .container {
   min-height: 100dvh; /* Asegura que el contenedor ocupe al menos toda la altura de la ventana,
@@ -26,6 +31,17 @@ body {
   align-items: center; /* Alinea verticalmente los elementos al centro */
   padding: 0 40px;
 }
+
+header {
+  background-color: #193865;
+  width: 100vw;
+  position: fixed;
+  z-index: 1000; /* Asegura que el header esté siempre encima de otros contenidos */
+  place-items: center; /* Alinea el contenido del header al centro */
+  margin: 0 px;
+  padding: 0 px;
+}
+
 header .header_desplegable {
   width: 100%;
   display: flex;
@@ -127,87 +143,8 @@ button:hover {
   position: relative;
 }
 main {
-  display: flex;
-  flex-direction: column;
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
+  margin: 0px; /* Evita que el footer se solape con el contenido */
 }
-main .home {
-  height: 100%;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  display: flex;
-  justify-items: end;
-  justify-content: flex-end;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url(/images/fondo.jpeg); /* Asegura que la imagen de fondo se centre y no se repita */
-  background-size: 100% 100%;
-  background-position: center;
-}
-main .home .wrap {
-  display: block;
-  align-content: center;
-  text-align: center;
-  width: 50%;
-  height: 400px;
-  font-size: 20px;
-  padding: 0px;
-}
-.home .wrap h1 {
-  padding: 40px 0px 0px 0px;
-  color: rgb(3, 3, 3);
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade un poco de sombra al texto */
-}
-hr {
-  border: 1px solid rgb(148, 35, 35);
-  width: 95%;
-  margin-top: 10px; /* Centra el hr y añade margen */
-  margin-bottom: 10px;
-}
-.home .wrap button {
-  padding: 10px;
-  margin: 10px;
-  background-color: #800020;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 1.5rem;
-  font-family: "WDXL Lubrifont TC", sans-serif;
-  cursor: pointer;
-}
-.home .wrap button:hover {
-  opacity: 0.8;
-  transform: scale(1.1); /* Hace que la imagen crezca un poco */
-  transition: transform 0.2s ease-in-out;
-}
-main aside{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  background-color: white;
-  padding: 1rem;
-  border-left: 5px solid #0a3d62;
-  margin-bottom: 2rem;
-  border-radius: 5px;
-  margin: 0px;
-  justify-content: center;
-  gap: 9rem;
-}
-aside figure{
-  display: flex;
-  align-items: center;
-  align-content: center;
-}
-aside .oferta{
-  width: 40%;
-}
-
 
 /**/
 /* Estilos para el pie de página */
@@ -288,41 +225,202 @@ footer .foot_2 a{
   color: black;
 }
 
+
 /**/
-/**/
-/*NOSOTROS PAGE*/
 .container .nosotros {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url(/images/familia.jpeg);
-  place-items: center;
-  background-size: 100% 100%;
-  position: relative;
+  display: flex;
+  min-height: 80vh; /* Altura mínima */
+  background-color: #edeef6; /* fondo base por si la imagen no carga */
 }
+
 .nosotros .wrap-nosotros {
-  position: left;
-  width: 50%;
-  height: 500px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  padding: 40px;
   font-size: 20px;
-  text-align: justify;
-  font-weight: 600;
-  padding: 250px 0px 30px 30px;
-  margin-left: 550px;
-  color: rgb(211, 186, 186);
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+  font-family: "roboto",sans-serif;
+  color: rgb(34, 34, 34);
+  text-shadow: 2px 2px 2px rgba(164, 158, 158, 0.5);
+  background: linear-gradient(
+    rgba(229, 226, 226, 0.2),
+    rgba(241, 237, 237, 0.3),
+    rgba(218, 218, 218, 0.5),
+    rgba(230, 227, 227, 0.5)
+  );
 }
-.nosotros .wrap-nosotros span {
-  color: yellow;
-}
+
 .nosotros .wrap-nosotros h2 {
-  color: rgba(255, 255, 255, 2);
-  font-size: 30px;
-  font-weight: 700;
-  text-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5); /* Añade un poco de sombra al texto */
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: rgba(9, 7, 7, 0.9);
   text-align: justify;
-  padding: 10px 5px;
+}
+
+.imagen-nosotros {
+  flex: 1;
+  background-image: url(/images/familia.jpeg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100%;
+}
+.parte1 {
+    display: flex;
+    width: 100%;
+}
+.foto {
+    display: flex;
+    width: 100%;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+}
+.foto img {
+    width: 590px ;
+    height: 450px;
+    border-radius: 15px;
+
+}
+.letras {
+    width: 100%;
+    height: 600px;
+
+}
+.title { 
+    font-size: 40px; 
+    position:relative;
+    top: 90px;
+    
+}
+.title2 {
+    width: 100%;
+    font-size: 40px;
+    position: relative;
+    top: 90px;
+
+}
+/**/
+.cta-boton {
+    position: relative;
+    border-radius: 15px;
+    background-color: #e78738;
+    width: 40%;
+    height: 49px;
+    margin: 0px 0px 0px 60px;
+    font-size: 24px;
+    top: 120px;
+}
+.home .cta-boton a{
+    text-decoration: none;
+    color: white;
+}
+
+.cta-boton:hover {
+    background-color: red;
+    font-size: 22px;
+    transform: scale(1.2);
+    transition: transform 0.1;
+}
+
+.galeria-servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 30px;
+}
+
+.galeria-servicios .moni {
+    background: white;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px black;
+    transition: transform 0.2s ease;
+}
+
+.galeria-servicios .moni:hover{
+    transform: translateY(-5px);
+}
+
+.galeria-servicios .moni img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.moni h3 {
+    font-size: 25px;
+}
+
+.moni p {
+    font-size: 22px;
+}
+
+.simulacion {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.mi-fondo {
+  background-image: url('../images/fondo_contacto.jpg');/* ruta de tu imagen */
+  background-size: cover; /* para que cubra todo el espacio */
+  background-position: center; /* centrado */
+  background-repeat: no-repeat; /* que no se repita */
+  height: 100vh; /* que ocupe toda la altura de la pantalla (opcional) */
+  margin-top: 50px;
+}
+
+.tabla-contacto {
+    background-color: #111; /* Fondo negro oscuro */
+    border-radius: 15px;
+    border-collapse: separate;
+    border-spacing: 0;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Sombra para dar un efecto más bonito */
+  }
+
+   .tabla-contacto td {
+    color: #fff;
+    padding: 10px;
+  }
+
+  .tabla-contacto input[type="text"], 
+  .tabla-contacto textarea {
+    width: 95%;
+    font-size: 16px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 8px;
+  }
+
+  .tabla-contacto textarea {
+    height: 100px;
+    resize: vertical;
+  }
+
+  .tabla-contacto input[type="checkbox"] {
+    margin-right: 8px;
+  }
+
+.photo_completa {
+  width: 100vw; /* Asegura que la imagen ocupe al menos toda la anchura de la ventana */
+  height: auto;
+  display: block;
+  overflow: hidden; /* Para evitar que el contenido se desborde */
+
+}
+section {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+}
+
+.fondo_agua{
+  opacity: 0.3; /* 30% de opacidad */
 }

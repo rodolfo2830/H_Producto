@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contáctanos</title>
-    <link rel="stylesheet" href="/css/contacto.css" />
+    <title>HOME</title>
+    <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -13,8 +13,10 @@
       referrerpolicy="no-referrer"
     />
   </head>
+
   <body>
     <div class="container">
+      <!--cabecera del body-->
       <header>
         <div class="header_desplegable">
           <figure>
@@ -25,26 +27,16 @@
             <ul class="nav">
               <li><a href="index.html">HOME</a></li>
               <li><a href="nosotros.html">Nosotros</a></li>
-              <li>
-                <a href="servicio.html">Servicios</a>
-                <ul>
-                  <li><a href="smantenimiento.html">Mantenimiento</a></li>
-                  <li><a href="sinstalacion.html">Instalación</a></li>
-                  <li>
-                    <a href="sintegracion.html">Integración de Sistemas</a>
-                  </li>
-                </ul>
-              </li>
+              <li><a href="mantenimiento.html">Servicios</a></li>
               <!---->
               <li>
-                <a href="producto.html" class="producto">Productos</a>
+                <a href="producto.html">Productos</a>
                 <ul>
-                  <li><a href="phcamera.html">Hogar camera</a></li>
-                  <li><a href="pmcamera.html">MYPE camera</a></li>
+                  <li><a href="phcamera.html">Hogar camara</a></li>
+                  <li><a href="pmcamera.html">MYPE Camara</a></li>
                 </ul>
               </li>
               <li><a href="contactanos.html">Contáctanos</a></li>
-              <li><a href="testimonio.html">Testimonios</a></li>
             </ul>
             <label for="search" class="search-container">
               <input
@@ -58,98 +50,88 @@
           </nav>
         </div>
       </header>
-      
+
       <div class="empty"></div>
-      
-      <!---->
-      <main>
-        <div id="primero">
-          <div class="fila1">
-            <div class="conta">
-              <h2>MANTENIMIENTO</h2>
-            </div>
 
-            <div class="imgconta">
-              <img src="/images/imgconta.png" alt="no hubo" />
-            </div>
-
-            <div class="text">
-              <p>
-                Para Consultas Correo Electrónico: servicio al cliente -
-                cash.pe@wolfseguridad.com
-              </p>
-              <ul>
-                <li>
-                  <b>TELEFONO: </b> Desde Lima: (01) 610-3400 / Desde
-                  Provincias: 0801-00106
-                </li>
-              </ul>
-              <p>Nuestros canales de Atención a nivel nacional:</p>
-              <ol>
-                <li>Para Gestión de Reclamos y Quejas:</li>
-                <ol>
-                  <li>
-                    <b>Correo Electronico:</b>reclamos-cash.pe@wolfseguridad.com
-                  </li>
-                  <li>
-                    <b>Telefono:</b>Desde Lima: (01) 610-3400 / Desde
-                    Provincias: 0801-00106
-                  </li>
-                </ol>
-                <li>Para Gestión de Consultas, Reclamos, Recojos y otros:</li>
-                <ol>
-                  <li><b>Whatsapp:</b> +51 985 042 947</li>
-                </ol>
-              </ol>
-            </div>
-          </div>
-
-          <div class="fila2">
-            <div class="testi">
-              <h2>INSTALACION</h2>
-            </div>
-
-            <div class="imgtesti">
-              <img src="/images/imgtesti.png" alt="no hubo" />
-            </div>
-            <div class="comentarios">
-              <img src="/images/comentario1.png" alt="no hubo" />
-              <img src="/images/comentario3.png" alt="no hubo" />
-              <img src="/images/comentario2.png" alt="no hubo" />
-            </div>
-          </div>
-
-          <div class="fila3">
-            <div class="traba">
-              <h2>INTEGRACION DE SISTEMAS</h2>
-            </div>
-
-            <div class="imgconta">
-              <img src="/images/imgtraba.png" alt="no hubo" />
-            </div>
-
-            <div class="cuerpo3">
-              <p>
-                <b>Beneficios:</b> Reconocimientos, Linea de Carrera, Prestamos,
-                Convenios, Programas Sociales<br />
-                Cumplimos al 100% con tus Beneficios de ley.
-              </p>
-              <div class="requi">
-                <h2>REQUISITOS:</h2>
-                <ul>
-                  <li>2 años de experiencia en seguridad privada comprobada</li>
-                  <li>curso SUCAMEC vigente</li>
-                  <li>
-                    Disponibilidad para laborar en regimen acuartelado 14*7
-                  </li>
-                  <li>Secundaria completa</li>
-                  <li>Residir en zonas de Aledañas</li>
-                </ul>
+      <!--parte principal del body-->
+      <main class="mi-fondo">
+        <table border="0" style="width: 100%">
+          <tr>
+            <td style="width: 50%; text-align: right">
+              <img src="images/Alarmasparacasa WOLF.jpg" width="90%"
+              height="100%"
+            </td>
+            <td style="width: 50%">
+              <div>
+                <big><strong>Contacto</strong></big>
               </div>
-            </div>
-          </div>
-        </div>
+              <table class="tabla-contacto">
+                <tr>
+                  <td><input type="text" placeholder="Nombre" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" placeholder="Apellido" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" placeholder="DNI" /></td>
+                </tr>
+                <tr>
+                  <td><input type="text" placeholder="Cel:" /></td>
+                </tr>
+                <tr>
+                  <td><textarea placeholder="Consultas"></textarea></td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>
+                      <input type="checkbox" name="opcion1" value="valor1" />
+                      Autorizo a contactarse conmigo para remitirme información
+                      y publicidad sobre sus servicios.
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>
+                      <input type="checkbox" name="opcion1" value="valor1" />
+                      He leído y autorizo el tratamiento de mis datos conforme a
+                      la Política de Privacidad.
+                    </label>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
       </main>
+      
+      <!--pie de pagina-->
+      <footer class="main-footer">
+        <section class="foot">
+          <address><strong>follow us:</strong></address>
+          <div class="redes">
+            <button class="facebook"></button>
+            <button class="instagram"></button>
+            <button class="twitter"></button>
+            <button class="wsp"></button>
+          </div>
+        </section>
+        <section class="foot">
+          <figure>
+            <img src="images/Logo.png" alt="WOLF" class="logo-footer" />
+          </figure>
+        </section>
+        <section class="foot_2">
+          <address>
+            <a href="contactanos.html">Contáctanos a nuestros números</a>
+          </address>
+          <address>
+            <a href="producto.html">Productos de alta calidad</a>
+          </address>
+          <address><a href="servicio.html">Servicios y más</a></address>
+          <address><a href="nosotros.html">Acerca de nosotros</a></address>
+        </section>
+      </footer>
     </div>
   </body>
 </html>
