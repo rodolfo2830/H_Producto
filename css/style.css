@@ -198,25 +198,25 @@ footer .foot_2 {
   transition: transform 0.2s ease-in-out; /* hace que sea mas lento*/
 }
 .redes .facebook {
-  background: url(/images/r_face.png);
+  background: url(../images/r_face.png);
   background-size: 90% 90%; /* Cubre todo el botón */
   background-position: center;
   background-repeat: no-repeat;
 }
 .redes .wsp {
-  background: url(/images/r_wsp.png);
+  background: url(../images/r_wsp.png);
   background-size: 90% 90%; /* Cubre todo el botón */
   background-position: center;
   background-repeat: no-repeat;
 }
 .redes .instagram {
-  background: url(/images/r_inst.png);
+  background: url(../images/r_inst.png);
   background-size: 90% 90%; /* Cubre todo el botón */
   background-position: center;
   background-repeat: no-repeat;
 }
 .redes .twitter {
-  background: url(/images/r_twit.png);
+  background: url(../images/r_twit.png);
   background-size: 90% 90%; /* Cubre todo el botón */
   background-position: center;
   background-repeat: no-repeat;
@@ -260,7 +260,7 @@ footer .foot_2 a {
 
 .imagen-nosotros {
   flex: 1;
-  background-image: url(/images/familia.jpeg);
+  background-image: url(../images/familia.jpeg);
   background-size: cover;
   background-position: center;
   min-height: 100%;
