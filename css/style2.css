@@ -185,7 +185,7 @@ hr {
   transform: scale(1.1); /* Hace que la imagen crezca un poco */
   transition: transform 0.2s ease-in-out;
 }
-main aside{
+main aside {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -199,15 +199,14 @@ main aside{
   justify-content: center;
   gap: 9rem;
 }
-aside figure{
+aside figure {
   display: flex;
   align-items: center;
   align-content: center;
 }
-aside .oferta{
+aside .oferta {
   width: 40%;
 }
-
 
 /**/
 /* Estilos para el pie de página */
@@ -284,7 +283,7 @@ footer .foot_2 {
   background-position: center;
   background-repeat: no-repeat;
 }
-footer .foot_2 a{
+footer .foot_2 a {
   color: black;
 }
 
