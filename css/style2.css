@@ -13,7 +13,7 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   /* Tres filas para el encabezado, contenido y pie de 
-  página el fr nos dice que todo lo que sobre se rellene en esl medio*/
+  página el fr nos dice que todo lo que sobre se rellene en el medio*/
 }
 .container header {
   background-color: white;
