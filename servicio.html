@@ -4,7 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Servicios</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/navBar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -17,43 +27,38 @@
   <body>
     <div class="container">
       <!--cabecera del body-->
+      <!--=================-->
       <header>
-        <div class="header_desplegable">
-          <figure>
-            <img src="images/Logo.png" alt="wolf.com" class="logo" />
-          </figure>
-
-          <nav>
-            <ul class="nav">
-              <li><a href="index.html">HOME</a></li>
-              <li><a href="nosotros.html">Nosotros</a></li>
-              <li><a href="mantenimiento.html">Servicios</a></li>
-              <!---->
-              <li>
-                <a href="producto.html">Productos</a>
-                <ul>
-                  <li><a href="phcamera.html">Hogar camara</a></li>
-                  <li><a href="pmcamera.html">MYPE Camara</a></li>
-                </ul>
-              </li>
-              <li><a href="contactanos.html">Contáctanos</a></li>
-            </ul>
-            <label for="search" class="search-container">
-              <input
-                type="text"
-                placeholder="Buscar..."
-                class="search"
-                id="menu"
-              />
-              <button><i class="fa-brands fa-searchengin fa-2x"></i></button>
-            </label>
-          </nav>
+        <!--Menu de navegacion-->
+        <div class="logo-header">
+          <img src="/images/logoBlack.png" alt="Wolf Security" />
         </div>
+        <button id="abrir" class="mobile-abrir-btn">
+          <i class="bi bi-list"></i>
+        </button>
+        <nav class="nav" id="nav">
+          <button id="cerrar" class="mobile-cerrar-btn">
+            <i class="bi bi-x"></i>
+          </button>
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="servicio.html">Servicios</a></li>
+            <li><a href="producto.html">Productos</a></li>
+            <li><a href="contactanos.html">Contáctanos</a></li>
+          </ul>
+          <form action="" class="search-form">
+            <input type="text" placeholder="Buscar..." class="search" />
+            <button type="submit" class="search-btn">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+        </nav>
       </header>
-
-      <div class="empty"></div>
+      <script src="js/mobileMenu.js"></script>
 
       <!--parte principal del body-->
+      <!--=================-->
       <main class="home">
         <!--solo cambiar esto-->
         <div class="parte1">

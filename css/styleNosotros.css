@@ -1,0 +1,85 @@
+/* ---- Reset ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* ---- Cuerpo ---- */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+.container {
+  min-height: 100dvh; /* Asegura que el contenedor ocupe al menos toda la altura de la ventana,
+  tambien a parte de dvh o lvh o svh*/
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /* Tres filas para el encabezado, contenido y pie de 
+  página el fr nos dice que todo lo que sobre se rellene en el medio*/
+  gap: 0;
+}
+
+/* ---- MAIN ---- */
+.banner {
+  position: relative;
+  background: url("/images/familia.jpeg") no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: left;
+}
+
+.texto-banner {
+  width: 60%;
+  padding: 50px;
+}
+
+.texto-banner h2 {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.texto-banner span {
+  color: #f1c40f;
+}
+
+.texto-banner p {
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .texto-banner {
+    width: 80%;
+  }
+
+  .banner {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .texto-banner {
+    width: 100%;
+    text-align: center;
+  }
+
+  .overlay {
+    justify-content: center;
+  }
+}

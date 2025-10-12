@@ -1,0 +1,146 @@
+/**/
+/* Estilos para el pie de página */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.main-footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #f6efed;
+  padding: 1rem;
+}
+.foot {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+}
+.foot_2 {
+  width: 30%;
+  display: block;
+  align-items: center;
+  text-align: center;
+  place-content: center;
+}
+.foot_2 a {
+  color: black;
+}
+.foot_2 a:hover {
+  color: #666464;
+  text-decoration: underline;
+}
+.logo-footer {
+  width: 5rem;
+  height: auto;
+}
+.redes {
+  display: flex;
+  gap: 1rem; /* Espacio entre los iconos de redes sociales */
+  padding: 1rem; /* Espacio alrededor de los iconos */
+}
+.redes button {
+  background: none;
+  border: none;
+  border-radius: 5px;
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #666464;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.redes button:hover {
+  opacity: 0.8;
+  transform: scale(1.1); /* Hace que la imagen crezca un poco */
+  transition: transform 0.2s ease-in-out; /* hace que sea mas lento*/
+}
+.redes .facebook {
+  background: url(../images/r_face.png);
+  background-size: 90% 90%; /* Cubre todo el botón */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.redes .wsp {
+  background: url(../images/r_wsp.png);
+  background-size: 90% 90%; /* Cubre todo el botón */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.redes .instagram {
+  background: url(../images/r_inst.png);
+  background-size: 90% 90%; /* Cubre todo el botón */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.redes .twitter {
+  background: url(../images/r_twit.png);
+  background-size: 90% 90%; /* Cubre todo el botón */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .main-footer {
+    flex-direction: column; /* Apila las secciones verticalmente */
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .foot,
+  .foot-izquierda {
+    width: 100%;
+    text-align: center;
+  }
+  .foot_2 {
+    width: 100%;
+    text-align: center;
+  }
+  .foot_2 address {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main-footer {
+    flex-direction: column; /* Apila las secciones verticalmente */
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .foot {
+    width: 100%;
+    text-align: center;
+  }
+  .foot_2 {
+    width: 100%;
+    text-align: center;
+  }
+  .foot_2 address {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .redes {
+    gap: 0.5rem; /* Reduce el espacio entre los iconos */
+    padding: 0.5rem; /* Reduce el espacio alrededor de los iconos */
+  }
+  .redes button {
+    width: 1.8rem; /* Reduce el tamaño de los botones */
+    height: 1.8rem;
+    font-size: 12px; /* Reduce el tamaño de la fuente */
+  }
+  .foot_2 address {
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+    line-height: 1.2rem; /* Ajusta el interlineado */
+  }
+}

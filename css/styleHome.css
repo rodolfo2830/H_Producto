@@ -1,0 +1,150 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  min-height: 100dvh; /* Asegura que el contenedor ocupe al menos toda la altura de la ventana,
+  tambien a parte de dvh o lvh o svh*/
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /* Tres filas para el encabezado, contenido y pie de 
+  página el fr nos dice que todo lo que sobre se rellene en el medio*/
+  gap: 0;
+}
+/**/
+/*aca estara la parte de articulos*/
+/*aca esta la pagina home.html */
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 5rem; /* Ajusta este valor según la altura de tu header */
+}
+.home {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+  justify-items: end;
+  justify-content: flex-end;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../images/fondo.jpeg"); /* Asegura que la imagen de fondo se centre y no se repita */
+  background-size: 100% 100%;
+  background-position: center;
+  padding-right: 2rem;
+}
+main .home .wrap {
+  display: block;
+  align-content: center;
+  text-align: center;
+  width: 50%;
+  height: 400px;
+  font-size: 20px;
+  padding: 0px;
+}
+.home .wrap h1 {
+  padding: 40px 0px 0px 0px;
+  color: rgb(3, 3, 3);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade un poco de sombra al texto */
+}
+hr {
+  border: 1px solid rgb(148, 35, 35);
+  width: 95%;
+  margin-top: 10px; /* Centra el hr y añade margen */
+  margin-bottom: 10px;
+}
+.home .wrap button {
+  padding: 10px;
+  margin: 10px;
+  background-color: #800020;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-family: "WDXL Lubrifont TC", sans-serif;
+  cursor: pointer;
+}
+.home .wrap button:hover {
+  opacity: 0.8;
+  transform: scale(1.1); /* Hace que la imagen crezca un poco */
+  transition: transform 0.2s ease-in-out;
+}
+.aside {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  background-color: white;
+  padding: 1rem;
+  border-left: 5px solid #0a3d62;
+  border-radius: 5px;
+  margin: 0px;
+  justify-content: center;
+  gap: 9rem;
+}
+.text-aside {
+  text-align: center;
+}
+.aside-figure {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.oferta {
+  width: 20rem;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    margin-top: calc(4rem); /* Ajusta este valor según la altura de tu header */
+  }
+  .home {
+    flex-direction: column;
+  }
+  .empty {
+    padding: 1rem;
+  }
+  main .home .wrap {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .home .wrap h1 {
+    font-size: 2rem;
+  }
+  aside {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .oferta {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .home .wrap h1 {
+    font-size: 1.5rem;
+  }
+  .home .wrap button {
+    font-size: 1rem;
+    padding: 8px;
+  }
+  .text-aside{
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+    line-height: 1.2rem; /* Ajusta el interlineado */
+  }
+  .oferta {
+    width: 100%; /* Ajusta el tamaño de la imagen para pantallas muy pequeñas */
+  }
+}
