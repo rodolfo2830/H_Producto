@@ -22,6 +22,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css"
+    />
 
     <script>
       function validarLongitud(textarea) {
@@ -77,60 +92,94 @@
         <table border="0" style="width: 100%">
           <tr class="main-tabla">
             <td style="width: 50%; text-align: right" class="columna-imagen">
-              <img
-                src="images/Alarmasparacasa WOLF.jpg"
-                width="90%"
-                height="100%"
-              />
+              <img src="images/Alarmasparacasa WOLF.jpg" width="90%" height="100%" />
             </td>
             <td style="width: 50%" class="tabla columna-formulario">
-              <div>
-                <big><strong>Contacto</strong></big>
+              <div class="titulo-contacto">
+                <big><strong>Contactános</strong></big>
+                <p>déjanos tu mensaje y con gusto responderemos</p>
               </div>
-              <table class="tabla-contacto">
-                <tr>
-                  <td><input type="text" placeholder="Nombre: " /></td>
-                </tr>
-                <tr>
-                  <td><input type="text" placeholder="Apellido: " /></td>
-                </tr>
-                <tr>
-                  <td><input type="text" placeholder="DNI: " /></td>
-                </tr>
-                <tr>
-                  <td><input type="text" placeholder="Cel:" /></td>
-                </tr>
-                <tr>
-                  <td>
-                    <textarea
-                      id="consulta"
-                      placeholder="Consultas:"
-                      oninput="validarLongitud(this)"
-                    ></textarea>
-                    <br />Ingrese max 20 caracteres.
-                    <div id="mensaje" style="color: red; font-size: 12px"></div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label>
-                      <input type="checkbox" name="opcion1" value="valor1" />
-
-                      Autorizo a contactarse conmigo para remitirme información
-                      y publicidad sobre sus servicios.
-                    </label>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label>
-                      <input type="checkbox" name="opcion1" value="valor1" />
-                      He leído y autorizo el tratamiento de mis datos conforme a
-                      la Política de Privacidad.
-                    </label>
-                  </td>
-                </tr>
-              </table>
+              <!--formulario de contacto-->
+              <form action="" id="contact-form" class="contact_form" autocomplete="off">
+                <table class="tabla-contacto">
+                  <tr>
+                    <td>
+                      <input
+                        type="text"
+                        id="user-name"
+                        class="contact_input"
+                        placeholder="Nombre y Apellido: "
+                        required
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        type="text"
+                        id="user-email"
+                        class="contact_input"
+                        placeholder="Correo: "
+                        required
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        type="text"
+                        id="user-DNI"
+                        class="contact_input"
+                        placeholder="DNI: "
+                        required
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input
+                        type="text"
+                        id="user-cel"
+                        class="contact_input"
+                        placeholder="Celular:"
+                        required
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <textarea
+                        id="consulta"
+                        class="contact_input"
+                        placeholder="Consultas:"
+                        oninput="validarLongitud(this)"
+                        required
+                      ></textarea>
+                      <br />Ingrese max 20 caracteres.
+                      <div id="mensaje" style="color: red; font-size: 12px"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>
+                        <input type="checkbox" id="autorizo1" name="opcion1" value="valor1" />
+                        Autorizo a contactarse conmigo para remitirme información y publicidad sobre
+                        sus servicios.
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label>
+                        <input type="checkbox" id="autorizo2" name="opcion1" value="valor1" />
+                        He leído y autorizo el tratamiento de mis datos conforme a la Política de
+                        Privacidad.
+                      </label>
+                    </td>
+                  </tr>
+                </table>
+                <button type="submit" class="contact_button" id="enviar">Enviar</button>
+              </form>
             </td>
           </tr>
         </table>
@@ -165,5 +214,13 @@
         </section>
       </footer>
     </div>
+    <!-- Agrega ESTA línea para cargar el script de EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- Agrega ESTA línea para cargar el script de iziToast -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+
+    <!-- Debe ir DESPUÉS de emailjs e iziToast -->
+    <script src="js/form.js"></script>
   </body>
 </html>
