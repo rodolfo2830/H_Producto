@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MYPE camera</title>
-    <link rel="stylesheet" href="css/producto.css" />
+    <link rel="stylesheet" href="css/cards.css" />
     <link rel="stylesheet" href="css/navBar.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -20,111 +24,129 @@
       href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Edu+SA+Hand:wght@400..700&family=M+PLUS+2:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=WDXL+Lubrifont+TC&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <div class="container">
       <!--cabecera del body-->
+      <!--=================-->
       <header>
-        <div class="header_desplegable">
-          <figure>
-            <img src="images/Logo.png" alt="wolf.com" class="logo" />
-          </figure>
-
-          <nav>
-            <ul class="nav">
-              <li><a href="index.html">HOME</a></li>
-              <li><a href="nosotros.html">Nosotros</a></li>
-              <li><a href="mantenimiento.html">Servicios</a></li>
-              <!---->
-              <li>
-                <a href="producto.html">Productos</a>
-                <ul>
-                  <li><a href="phcamera.html">Hogar camara</a></li>
-                  <li><a href="pmcamera.html">MYPE Camara</a></li>
-                </ul>
-              </li>
-              <li><a href="contactanos.html">Contáctanos</a></li>
-            </ul>
-            <label for="search" class="search-container">
-              <input
-                type="text"
-                placeholder="Buscar..."
-                class="search"
-                id="menu"
-              />
-              <button><i class="fa-brands fa-searchengin fa-2x"></i></button>
-            </label>
-          </nav>
+        <!--Menu de navegacion-->
+        <div class="logo-header">
+          <img src="/images/logoBlack.png" alt="Wolf Security" />
         </div>
-      </header>
+        <button id="abrir" class="mobile-abrir-btn">
+          <i class="bi bi-list"></i>
+        </button>
+        <nav class="nav" id="nav">
+          <button id="cerrar" class="mobile-cerrar-btn">
+            <i class="bi bi-x"></i>
+          </button>
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="servicio.html">Servicios</a></li>
+            <li>
+              <a href="producto.html">Productos</a>
+              <ul>
+                <li><a href="pHome.html">Productos Home</a></li>
+                <li><a href="pMype.html">Productos MYpe</a></li>
+              </ul>
+            </li>
 
-      <div class="empty"></div>
+            <li><a href="contactanos.html">Contáctanos</a></li>
+          </ul>
+          <form action="" class="search-form">
+            <input type="text" placeholder="Buscar..." class="search" />
+            <button type="submit" class="search-btn">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+        </nav>
+      </header>
+      <script src="js/mobileMenu.js"></script>
 
       <!--parte principal del body-->
       <main class="devices">
         <!--solo cambiar esto-->
         <h2>Productos para empresa</h2>
         <section>
-          <article class="products">
-            <img src="images/pm1.png" alt="" />
-            <span class="insignia">NUEVO!</span>
-            <h3>Detector Perimetral FLX-P-DT</h3>
-            <br />
-            <p>
-              Dispositivo ideado para proteger los exteriores de su casa o
-              negocio: terraza, zonas comunes o jardines
-            </p>
+          <article class="products2">
+            <a href="contactanos.html">
+              <img src="images/pm1.png" alt="" />
+              <span class="insignia">NUEVO!</span>
+              <h3>Detector Perimetral FLX-P-DT</h3>
+              <br />
+              <p>
+                Dispositivo ideado para proteger los exteriores de su casa o negocio: terraza, zonas
+                comunes o jardines
+              </p>
+            </a>
           </article>
-          <article class="products">
-            <img src="images/pm2.png" alt="" />
-            <span class="insignia">NUEVO!</span>
-            <h3>Cámara de seguridad exterior NBE-5703-AL-GOV</h3>
-            <p>
-              Cámara de 5MP diseñada para exteriores, combina fiabilidad y alto
-              rendimiento para monitorear tu propiedad con gran claridad y
-              detalle.
-            </p>
+          <article class="products2">
+            <a href="contactanos.html">
+              <img src="images/pm2.png" alt="" />
+              <span class="insignia">NUEVO!</span>
+              <h3>Cámara de seguridad exterior NBE-5703-AL-GOV</h3>
+              <p>
+                Cámara de 5MP diseñada para exteriores, combina fiabilidad y alto rendimiento para
+                monitorear tu propiedad con gran claridad y detalle.
+              </p>
+            </a>
           </article>
-          <article class="products">
-            <img src="images/pm3.png" alt="" />
-            <span class="insignia">NUEVO!</span>
-            <h3>Cámara de seguridad Hikvision DS-2DE4225IW</h3>
-            <p>
-              Cámara super moderna, con visión nocturna a color, con entrada y
-              salida de audio y alarmas. Full HD (1080p).
-            </p>
+          <article class="products2">
+            <a href="contactanos.html">
+              <img src="images/pm3.png" alt="" />
+              <span class="insignia">NUEVO!</span>
+              <h3>Cámara de seguridad Hikvision DS-2DE4225IW</h3>
+              <p>
+                Cámara super moderna, con visión nocturna a color, con entrada y salida de audio y
+                alarmas. Full HD (1080p).
+              </p>
+            </a>
           </article>
-        </section>
-        <section>
-          <article class="products">
-            <img src="images/pm4.png" alt="" />
-            <span class="insignia">NUEVO!</span>
-            <h3>Sirena de alta potencia</h3>
-            <br />
-            <p>
-              Dispositivo que emite un potente aviso sonoro cuando se produce un
-              disparo de alarma.
-            </p>
+          <article class="products2">
+            <a href="contactanos.html">
+              <img src="images/pm4.png" alt="" />
+              <span class="insignia">NUEVO!</span>
+              <h3>Sirena de alta potencia</h3>
+              <br />
+              <p>
+                Dispositivo que emite un potente aviso sonoro cuando se produce un disparo de
+                alarma.
+              </p>
+            </a>
           </article>
-          <article class="products">
-            <img src="images/pm5.png" alt="" />
-            <span class="insignia">NUEVO!</span>
-            <h3>Detector Perimetral PIR exterior Ajax</h3>
-            <p>
-              Dispositivo ideado para proteger los exteriores de su casa o
-              negocio: terraza, zonas comunes o jardines.
-            </p>
+          <article class="products2">
+            <a href="contactanos.html">
+              <img src="images/pm5.png" alt="" />
+              <span class="insignia">NUEVO!</span>
+              <h3>Detector Perimetral PIR exterior Ajax</h3>
+              <p>
+                Dispositivo ideado para proteger los exteriores de su casa o negocio: terraza, zonas
+                comunes o jardines.
+              </p>
+            </a>
           </article>
-          <article class="products">
-            <img src="images/pm6.png" alt="" />
-            <span class="insignia">NUEVO!</span>
-            <h3>Botón SOS FLX</h3>
-            <br />
-            <p>
-              Botón SOS que le permite solicitar ayuda en cualquier momento y
-              ante cualquier emergencia.
-            </p>
+          <article class="products2">
+            <a href="contactanos.html">
+              <img src="images/pm6.png" alt="" />
+              <span class="insignia">NUEVO!</span>
+              <h3>Botón SOS FLX</h3>
+              <br />
+              <p>
+                Botón SOS que le permite solicitar ayuda en cualquier momento y ante cualquier
+                emergencia.
+              </p>
+            </a>
           </article>
         </section>
       </main>

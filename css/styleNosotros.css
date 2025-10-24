@@ -27,8 +27,8 @@ body {
   background: url("/images/familia.jpeg") no-repeat center center/cover;
   height: 100vh;
   color: white;
+  margin-top: calc(60px + 0.5rem);
 }
-
 .overlay {
   position: absolute;
   top: 0;
@@ -64,6 +64,10 @@ body {
 
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
+  .banner {
+    height: 80vh;
+
+  }
   .texto-banner {
     width: 80%;
   }

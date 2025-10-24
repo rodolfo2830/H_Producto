@@ -27,7 +27,7 @@ main {
   padding: 0;
   width: 100%;
   height: 100%;
-  margin-top: 5rem; /* Ajusta este valor según la altura de tu header */
+  margin-top: calc(30px + 1rem); /* Ajusta este valor según la altura de tu header */
 }
 .home {
   font-family: Georgia, "Times New Roman", Times, serif;

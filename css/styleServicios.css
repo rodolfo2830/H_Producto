@@ -13,7 +13,7 @@ body {
   display: block;
 }
 
-img,
+main img,
 video {
   max-width: 100%;
   height: auto;
@@ -29,20 +29,19 @@ video {
 }
 
 main {
-  margin: 0;
-   display: flex;
+  display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  margin-top: 5rem; 
+  margin-top: 5rem;
 }
 
 .parte1 {
   display: flex;
   flex-direction: row; /* fila: letras a la izquierda, imagen a la derecha */
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   gap: 2rem;
@@ -70,57 +69,27 @@ main {
 }
 .title,
 .title2 {
-  font-size: 2.5rem;
+  font-size: calc(20px + 0.5rem);
   text-align: left;
 }
 
 .cta-boton {
- border-radius: 15px;
+  border-radius: 15px;
   background-color: #e78738;
   padding: 12px 24px;
   font-size: 1.2rem;
   border: none;
 }
 .home .cta-boton a {
- text-decoration: none;
+  text-decoration: none;
   color: white;
 }
 
 .cta-boton:hover {
- background-color: red;
+  background-color: red;
   transform: scale(1.1);
   transition: 0.3s ease-in-out;
 }
-
-/* ======== MOBILE / TABLET ======== */
-@media screen and (max-width: 768px) {
-  .parte1 {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .letras {
-    align-items: center;
-  }
-
-  .title,
-  .title2 {
-    font-size: 1.5rem;
-  }
-
-  .cta-boton {
-    width: 80%;
-    font-size: 1rem;
-    margin-top: 1rem;
-  }
-
-  .foto {
-    order: 3; /* opcional: asegura que la imagen esté abajo */
-  }
-}
-
 
 /**/
 
@@ -139,10 +108,10 @@ main {
 /**/
 
 .galeria-servicios {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 30px;
 }
 
 .galeria-servicios .moni {
@@ -151,6 +120,7 @@ main {
   border-radius: 15px;
   box-shadow: 0 2px 4px black;
   transition: transform 0.2s ease;
+  width: 30%;
 }
 
 .galeria-servicios .moni:hover {
@@ -173,9 +143,61 @@ main {
 }
 
 .simulacion {
-   width: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
-  margin: 2rem;
+  padding: 5rem;
 }
 
+/* ======== MOBILE / TABLET ======== */
+@media (max-width: 968px) {
+  .moni img{
+    width: 100%;
+    height: 40%;
+  }
+  .moni h3 {
+    font-size: 20px;
+  }
+  .moni p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .parte1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+  .foto {
+    display: none;
+  }
+  .galeria-servicios {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .galeria-servicios .moni {
+    width: 90%;
+  }
+  .letras {
+    align-items: center;
+  }
+
+  .title,
+  .title2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-boton {
+    width: 80%;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  .foto {
+    order: 3; /* opcional: asegura que la imagen esté abajo */
+  }
+  .simulacion {
+    padding: 2rem;
+  }
+}

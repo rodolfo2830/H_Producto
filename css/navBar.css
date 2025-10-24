@@ -17,6 +17,10 @@ header {
   position: fixed;
   width: 100%;
 }
+ul,
+ol {
+  list-style: none;
+}
 .logo-header {
   max-width: 5rem; /* Ancho fijo del contenedor */
   overflow: hidden; /* Oculta cualquier desbordamiento */
@@ -35,8 +39,24 @@ header {
   text-decoration: none;
   color: #000000;
 }
+.nav-list li a:hover {
+  color: crimson;
+}
 .mobile-abrir-btn {
   display: none;
+}
+.nav-list li ul {
+  display: none;
+  position: absolute;
+  padding: 0.5rem;
+  min-width: 9rem;
+}
+.nav-list li:hover ul {
+  display: block;
+  background-color: #e4cdc2;
+}
+.nav-list li ul li {
+  padding: 0.5rem 0;
 }
 .mobile-cerrar-btn {
   display: none;
@@ -91,6 +111,12 @@ header {
   }
   .search {
     width: 10rem;
+  }
+  .nav-list li ul li {
+    display: none;
+  }
+  .nav ul li:hover ul {
+    display: none;
   }
 }
 @media screen and (max-width: 768px) {

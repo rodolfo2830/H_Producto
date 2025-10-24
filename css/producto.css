@@ -26,7 +26,7 @@ main {
   text-align: center;
   width: 100%;
   justify-content: center;
-  margin-top: calc(80px + 2rem);
+  margin-top: calc(60px + 1.5rem);
   gap: 2rem;
   overflow-x: hidden;
   padding: 1rem;
@@ -127,6 +127,19 @@ section .products:hover{
 }
 h2{
    font-family: "Quicksand", sans-serif;
+}
+@media (max-width: 968px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin-top: calc(40px + 1rem);
+  }
+  main .home-camera,
+  .mype-camera {
+    width: 90%;
+    margin: 10px 0;
+  }
 }
 @media (max-width: 768px) {
   main {
